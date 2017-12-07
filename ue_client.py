@@ -10,8 +10,8 @@ print "connected ue-vBBU."
 
 # sending attach request to vBBU with a service-type for video
 print "...attaching ue-vBBU"
-response = c.call.attachvBBU("192.168.186.51", 1)
-#print "attaching ue-vBBU response: ", response
+response = c.call.attachvBBU("192.168.186.51", 4)
+print "attaching ue-vBBU response: "
 responseUnpickled = pickle.loads(response)
-print "nesId: ", responseUnpickled.nesId
-print "tempId: ", responseUnpickled.tempId
+print "\tMdd-nesId: ", responseUnpickled.nesId
+print "\tMdd-tempId: ", responseUnpickled.tempId
