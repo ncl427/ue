@@ -20,8 +20,9 @@ attachedObj = createAttachObj()
 print "ueAttachObj:"
 print "\t", attachedObj.ip
 print "\t", attachedObj.serviceType
+attachedParameter = pickle.dumps(attachedObj)
 print "...attaching ue-vBBU"
-response = c.call.attachvBBU("192.168.186.51", 1)
+response = c.call.attachvBBU("192.168.186.51", 1, attachedParameter)
 print "attaching ue-vBBU response: "
 responseUnpickled = pickle.loads(response)
 print "\tMdd-nesId: ", responseUnpickled.nesId
